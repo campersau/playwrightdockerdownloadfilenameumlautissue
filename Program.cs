@@ -13,8 +13,8 @@ app.MapGet("/", async context =>
 
 app.MapGet("/download2", async context =>
 {
-    var contentDisposition = new ContentDispositionHeaderValue("attachment"); // { FileNameStar = "testäöü" };
-    contentDisposition.SetHttpFileName("testäöü.txt");
+    var contentDisposition = new ContentDispositionHeaderValue("attachment"); // { FileNameStar = "testÃ¤Ã¶Ã¼" };
+    contentDisposition.SetHttpFileName("testÃ¤Ã¶Ã¼.txt");
 
     context.Response.ContentType = "text/plain";
     context.Response.GetTypedHeaders().ContentDisposition = contentDisposition;
